@@ -1,31 +1,35 @@
 import React, { useState } from "react";
 import { playGame } from "../../helpers/playGame";
 
+const enemies = [
+  { name: "BotA", distance: 100, speed: 10 },
+  { name: "BotB", distance: 50, speed: 20 },
+  { name: "BotC", distance: 30, speed: 20 },
+];
+
+const towerRange = 50;
+
 const TowerGame: React.FC = () => {
   const [gameOver, setGameOver] = useState<boolean>(false);
   const [turns, setTurns] = useState<number>(0);
   const [outcome, setOutcome] = useState<string>("");
 
   const handleStartGame = () => {
-    const { outcome, turns } = playGame(
-      [
-        { name: "BotA", distance: 100, speed: 10 },
-        { name: "BotB", distance: 50, speed: 20 },
-        { name: "BotC", distance: 30, speed: 20 },
-      ],
-      50
-    );
+    const { outcome, turns } = playGame(enemies, towerRange);
     setGameOver(true);
     setTurns(turns);
     setOutcome(outcome);
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Tower game simulator</h1>
+      <p>Check console for game output</p>
       {!gameOver && (
         <div>
-          <button onClick={handleStartGame}>Start game</button>
+          <button onClick={handleStartGame} className="btn">
+            Start game
+          </button>
         </div>
       )}
       {outcome === "WIN" && (
