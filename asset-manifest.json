@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tower-defense/static/css/main.05416176.css",
+    "main.js": "/tower-defense/static/js/main.eff6fe81.js",
+    "static/js/453.668536ab.chunk.js": "/tower-defense/static/js/453.668536ab.chunk.js",
+    "index.html": "/tower-defense/index.html",
+    "main.05416176.css.map": "/tower-defense/static/css/main.05416176.css.map",
+    "main.eff6fe81.js.map": "/tower-defense/static/js/main.eff6fe81.js.map",
+    "453.668536ab.chunk.js.map": "/tower-defense/static/js/453.668536ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05416176.css",
+    "static/js/main.eff6fe81.js"
+  ]
+}
